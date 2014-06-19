@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+var debug = require('debug')('instamotor');
+var app = require('../app');
+var modelGenerator = require('../Models/setup');
+var Promise = require('bluebird');
+var server;
+
+
+
+modelGenerator()
+.then(function(models){
+  
+  app.set('port', process.env.PORT || 3000);
+  app.set('Vehicle', models.collections.vehicle);
+  app.set('connections', models.connections);
+
+  server = app.listen(app.get('port'), function() {
+    debug('Express server listening on port ' + server.address().port);
+  });
+
+})
+.catch(console.error.bind(console, "Error Setting up Models: "));
+
+
