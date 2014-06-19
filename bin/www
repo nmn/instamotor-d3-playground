@@ -9,9 +9,10 @@ var server;
 
 modelGenerator()
 .then(function(models){
-  
+
+  //console.log(Object.keys(models.collections));
   app.set('port', process.env.PORT || 3000);
-  app.set('Vehicle', models.collections.vehicle);
+  app.set('Vehicle', models.collections.vehicles);
   app.set('connections', models.connections);
 
   server = app.listen(app.get('port'), function() {

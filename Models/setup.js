@@ -29,12 +29,28 @@ var config = {
 
 var Vehicle = Waterline.Collection.extend({
 
-  identity: 'vehicle',
+  identity: 'vehicles',
   connection: 'myLocalMySql',
 
   attributes: {
-    first_name: 'string',
-    last_name: 'string'
+    title: 'string',
+    year: 'string',
+    make: 'string',
+    price: 'integer',
+    mileage: 'integer',
+    post_date: 'datetime',
+    location: 'string',
+    href: 'text',
+    email: 'text',
+    post_text: 'text',
+    unique_digest: 'string',
+    origin: 'string',
+    listing_id: 'string',
+    phone: 'string',
+    active: 'integer',
+    vin: 'string',
+    model: 'string',
+    prospect_attrs: 'text'
   }
 });
 

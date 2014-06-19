@@ -5,19 +5,20 @@ var router = express.Router();
 
 
 module.exports = function(app){
-  var Vehicle;
+  // var Vehicle;
   
-  function setModel(){
-    Vehicle = Vehicle || app.get('Vehicle');
-  }
+  // function setModel(){
+  //   Vehicle = Vehicle || app.get('Vehicle');
+  // }
 
   router.get('/', function(req, res) {
-    setModel();
+    var Vehicle = app.get('Vehicle');
     Vehicle.find().then(res.send.bind(res));
   });
 
   router.get('/:id', function(req, res) {
-    setModel();
+    // setModel();
+    var Vehicle = app.get('Vehicle');
     Vehicle.findOne({id:req.params.id}).then(res.send.bind(res));
   });
 
