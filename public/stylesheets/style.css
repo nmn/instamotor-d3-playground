@@ -1,6 +1,48 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 6rem 2rem 2rem;
+}
+
+header {
+  position: fixed;
+  height: 5rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255,255,255,0.9);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  text-align: right;
+}
+
+header input[type="search"] {
+  margin: 1rem;
+  height: 3rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(240,240,240,0.9);
+  width: 50%;
+  font-size: 1.8rem;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+header h1 {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 3rem;
+  letter-spacing: 7px;
+  padding: 0;
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 100;
+  background-image: url(https://www.instamotor.com/img/instamotor_logo_bello.png);
+  background-size: contain;
+  background-position: left center;
+  color: transparent;
+  background-repeat: no-repeat;
+  min-width: 17rem;
 }
 
 a {

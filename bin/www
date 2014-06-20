@@ -5,8 +5,7 @@ var modelGenerator = require('../Models/setup');
 var Promise = require('bluebird');
 var server;
 
-
-
+console.log("starting...");
 modelGenerator()
 .then(function(models){
 
@@ -16,7 +15,7 @@ modelGenerator()
   app.set('connections', models.connections);
 
   server = app.listen(app.get('port'), function() {
-    debug('Express server listening on port ' + server.address().port);
+    console.log('Express server listening on port ' + server.address().port);
   });
 
 })
