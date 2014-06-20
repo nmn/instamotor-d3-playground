@@ -45,6 +45,30 @@ header h1 {
   min-width: 17rem;
 }
 
+header .details {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  right: 0;
+  height: 2rem;
+  background: gray;
+  color: white;
+  opacity: 0.1;
+}
+
+svg {
+  border-left: 1px solid red;
+  border-bottom: 1px solid red;
+}
+
+.price {
+  display: inline-block;
+  padding: 0.5rem 0.05rem;
+  width: 55px;
+  -webkit-transform: translateY(10px) translateX(5px) rotate(45deg);
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
 a {
   color: #00B7FF;
 }
